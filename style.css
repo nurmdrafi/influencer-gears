@@ -80,6 +80,10 @@ nav {
   width: 380px;
   height: auto;
 }
+.banner-right img:hover {
+  transform: scale(1.2);
+  transition: transform 3s ease-in-out;
+}
 .highlight {
   background: linear-gradient(
     0deg,
@@ -160,6 +164,7 @@ nav {
   border-right: none;
   margin-top: 50px;
   margin-bottom: 50px;
+  min-height: 100px;
 }
 
 .logos img {
@@ -203,6 +208,11 @@ nav {
 .product-price {
   font-size: 24px;
 }
+.product-info {
+  display: flex;
+  align-items: center;
+}
+
 .star {
   display: flex;
 }
@@ -213,6 +223,14 @@ nav {
 .see-more {
   display: flex;
   justify-content: flex-end;
+}
+.ratings {
+  font-size: 20px;
+  padding-left: 10px;
+}
+.product-details {
+  display: flex;
+  flex-direction: column;
 }
 .see-more a {
   text-decoration: none;
@@ -260,7 +278,6 @@ form {
 form input {
   width: 300px;
   padding: 15px;
-  /* border-radius: 5px; */
   outline: none;
   font-size: 16px;
   letter-spacing: 1.5px;
@@ -328,6 +345,7 @@ footer p {
   }
   .banner-right {
     order: 1;
+    padding-top: 50px;
   }
   .banner-left {
     order: 2;
@@ -339,6 +357,13 @@ footer p {
 
   .products {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* Responsive Menu */
+@media only screen and (max-width: 725px) {
+  nav {
+    flex-direction: column;
+    margin-bottom: 30px;
   }
 }
 
@@ -355,5 +380,8 @@ footer p {
   }
   .banner-left {
     order: 2;
+    padding-bottom: 20px;
   }
 }
+
+
