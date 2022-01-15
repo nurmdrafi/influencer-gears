@@ -51,6 +51,8 @@ nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   height: calc(100vh - 80px);
+  position: relative;
+  overflow: hidden;
 }
 
 .banner-left {
@@ -74,8 +76,57 @@ nav {
 .banner-right img {
   width: 380px;
   height: auto;
-  
 }
+
+/* Button Animation */
+
+.primary-btn {
+  border: none;
+  background: rgb(251, 33, 117);
+  background: linear-gradient(
+    0deg,
+    rgba(251, 33, 117, 1) 0%,
+    rgba(234, 76, 137, 1) 100%
+  );
+  color: #fff;
+  padding: 15px 10px;
+  border-radius: 10px;
+}
+
+.primary-btn:before {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  top: -180px;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background-color: #fff;
+  animation: shiny-btn 3s ease-in-out infinite;
+}
+.primary-btn:hover {
+  opacity: 0.7;
+}
+
+@keyframes shiny-btn {
+  0% {
+    transform: scale(0) rotate(45deg);
+    opacity: 0;
+  }
+  80% {
+    transform: scale(0) rotate(45deg);
+    opacity: 0.5;
+  }
+  81% {
+    transform: scale(4) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(50) rotate(45deg);
+    opacity: 0;
+  }
+}
+
 /* Logos */
 
 .logos {
