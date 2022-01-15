@@ -1,8 +1,12 @@
 /* Font */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap");
 
 :root {
   --orange: #fb8200;
+  --white: #fff;
+  --gray: #D9DBE1;
+  --lightblue: #2e2c52;
+  --blue: #0a0826;
 }
 /* Global Rules */
 
@@ -108,8 +112,8 @@ nav {
 /* Footer */
 
 footer {
-  color: white;
-  background-color: #0a0826;
+  color: var(--white);
+  background-color: var(--blue);
   width: 100%;
   margin: 0 auto;
   height: 180px;
@@ -119,17 +123,28 @@ footer {
   align-items: center;
   text-align: center;
 }
+footer span{
+    font-size: 24px;
+    font-weight: 700;
+}
+footer p{
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--gray);
+    line-height: 24px;
+}
 .social-icons {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  height: 60px;
 }
 .social-icons i {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 18px;
-  padding: 10px;
+  font-size: 20px;
   margin: 10px;
   cursor: pointer;
   border-radius: 50%;
-  background-color: #2e2c52;
+  background-color: var(--lightblue);
 }
