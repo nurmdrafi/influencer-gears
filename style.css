@@ -4,9 +4,10 @@
 :root {
   --orange: #fb8200;
   --white: #fff;
-  --gray: #D9DBE1;
+  --gray: #d9dbe1;
+  --darkgray: #3a3a3a;
   --lightblue: #2e2c52;
-  --blue: #0a0826;
+  --darkblue: #0a0826;
 }
 /* Global Rules */
 
@@ -49,18 +50,31 @@ nav {
 .banner {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 130px;
+  height: calc(100vh - 80px);
 }
+
 .banner-left {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
 }
+.banner-left h1 {
+  font-size: 50px;
+  color: var(--darkgray);
+}
+
 .banner-right {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  background: url(images/circle-design.svg) right / cover no-repeat;
+  background-size: 70%;
+}
+.banner-right img {
+  width: 380px;
+  height: auto;
+  
 }
 /* Logos */
 
@@ -113,7 +127,7 @@ nav {
 
 footer {
   color: var(--white);
-  background-color: var(--blue);
+  background-color: var(--darkblue);
   width: 100%;
   margin: 0 auto;
   height: 180px;
@@ -123,15 +137,15 @@ footer {
   align-items: center;
   text-align: center;
 }
-footer span{
-    font-size: 24px;
-    font-weight: 700;
+footer span {
+  font-size: 24px;
+  font-weight: 700;
 }
-footer p{
-    font-weight: 700;
-    font-size: 14px;
-    color: var(--gray);
-    line-height: 24px;
+footer p {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--gray);
+  line-height: 24px;
 }
 .social-icons {
   display: grid;
