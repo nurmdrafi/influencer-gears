@@ -185,14 +185,13 @@ nav {
 .product {
   padding: 15px;
   box-shadow: 0px 20px 25px -3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 .product:hover {
   box-shadow: 0px 0px 25px -3px rgba(0, 0, 0, 0.1);
 }
 
 .product-image {
-  /* min-width: 300px;
-  min-height: 256px; */
   width: 100%;
   border-radius: 10px;
 }
@@ -211,7 +210,26 @@ nav {
 .star .fas {
   color: var(--orange);
 }
-
+.see-more{
+    display: flex;
+    justify-content: flex-end;
+}
+.see-more a{
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+    background: linear-gradient(
+    0deg,
+    rgba(0, 172, 238, 1) 0%,
+    rgba(2, 126, 251, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.see-more:hover i{
+margin-left: 10px;
+}
 /*-------
  Footer 
 -------*/
