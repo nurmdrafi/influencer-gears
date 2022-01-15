@@ -55,7 +55,6 @@ nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 30px;
-  height: calc(100vh - 80px);
 }
 
 .banner-left {
@@ -75,6 +74,8 @@ nav {
   align-items: center;
   background: url(images/circle-design.svg) right / cover no-repeat;
   background-size: 400px 400px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 .banner-right img {
   width: 380px;
@@ -207,6 +208,10 @@ nav {
 }
 .product-price {
   font-size: 24px;
+  display: block;
+}
+.product-price::first-letter {
+  font-weight: 700;
 }
 .product-info {
   display: flex;
@@ -363,7 +368,6 @@ footer p {
 @media only screen and (max-width: 725px) {
   nav {
     flex-direction: column;
-    margin-bottom: 30px;
   }
 }
 
@@ -380,8 +384,5 @@ footer p {
   }
   .banner-left {
     order: 2;
-    padding-bottom: 20px;
   }
 }
-
-
