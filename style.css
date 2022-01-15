@@ -1,6 +1,9 @@
 /* Font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
 
+:root{
+    --orange: #FB8200;
+}
 /* Global Rules */
 
 * {
@@ -54,4 +57,49 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+/* Logos */
+
+.logos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logos img{
+    width: 80px;
+    height: 80px;
+    margin: 0 20px;
+}
+
+.products{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+.product {
+    padding: 15px;
+    border: 1px solid pink;
+}
+.product img{
+    min-width: 300px;
+    min-height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-title{
+    font-size: 28px;
+    font-weight: 500;
+}
+.product-price{
+    font-size: 24px;
+}
+.star .fas{
+    color: var(--orange);
+}
+.star .far{
+    color: var(--orange);
 }
