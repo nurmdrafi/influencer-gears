@@ -54,6 +54,7 @@ nav {
 .banner {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  column-gap: 30px;
   height: calc(100vh - 80px);
 }
 
@@ -73,7 +74,7 @@ nav {
   justify-content: flex-end;
   align-items: center;
   background: url(images/circle-design.svg) right / cover no-repeat;
-  background-size: 70%;
+  background-size: 400px 400px;
 }
 .banner-right img {
   width: 380px;
@@ -157,6 +158,7 @@ nav {
   border-image: linear-gradient(to right, white, lightgray, white) 1;
   border-left: none;
   border-right: none;
+  margin-top: 50px;
   margin-bottom: 50px;
 }
 
@@ -189,9 +191,9 @@ nav {
 }
 
 .product-image {
-  width: 300px;
-  height: 256px;
-  object-fit: cover;
+  /* min-width: 300px;
+  min-height: 256px; */
+  width: 100%;
   border-radius: 10px;
 }
 
@@ -218,7 +220,6 @@ footer {
   color: var(--white);
   background-color: var(--darkblue);
   width: 100%;
-  margin: 0 auto;
   height: 180px;
   display: flex;
   flex-direction: column;
@@ -250,4 +251,52 @@ footer p {
   cursor: pointer;
   border-radius: 50%;
   background-color: var(--lightblue);
+}
+
+/*-------------
+  Media Query 
+--------------*/
+
+/* Large Device */
+@media only screen and (max-width: 1312px) {
+  .container {
+    width: 90%;
+  }
+}
+
+/* Tablet Device */
+@media only screen and (max-width: 992px) {
+  .banner {
+    grid-template-columns: 1fr;
+  }
+  .banner-right {
+    order: 1;
+  }
+  .banner-left {
+    order: 2;
+  }
+  .banner-right {
+    justify-content: center;
+    background-position: center;
+  }
+
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile Device */
+@media only screen and (max-width: 688px) {
+  .banner {
+    grid-template-columns: 1fr;
+  }
+  .products {
+    grid-template-columns: 1fr;
+  }
+  .banner-right {
+    order: 1;
+  }
+  .banner-left {
+    order: 2;
+  }
 }
