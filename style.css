@@ -51,8 +51,6 @@ nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   height: calc(100vh - 80px);
-  position: relative;
-  overflow: hidden;
 }
 
 .banner-left {
@@ -81,6 +79,7 @@ nav {
 /* Button Animation */
 
 .primary-btn {
+  position: relative;
   border: none;
   background: rgb(251, 33, 117);
   background: linear-gradient(
@@ -91,6 +90,7 @@ nav {
   color: #fff;
   padding: 15px 10px;
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .primary-btn:before {
@@ -104,8 +104,9 @@ nav {
   background-color: #fff;
   animation: shiny-btn 3s ease-in-out infinite;
 }
-.primary-btn:hover {
-  opacity: 0.7;
+.primary-btn:hover i {
+  margin-left: 5px;
+  transition: margin-left 0.03s ease-in-out;
 }
 
 @keyframes shiny-btn {
