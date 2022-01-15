@@ -1,8 +1,8 @@
 /* Font */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
 
-:root{
-    --orange: #FB8200;
+:root {
+  --orange: #fb8200;
 }
 /* Global Rules */
 
@@ -60,46 +60,76 @@ nav {
 }
 /* Logos */
 
-.logos{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.logos img{
-    width: 80px;
-    height: 80px;
-    margin: 0 20px;
+.logos img {
+  width: 80px;
+  height: 80px;
+  margin: 0 20px;
 }
 
-.products{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px;
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
 }
 
 .product {
-    padding: 15px;
-    border: 1px solid pink;
+  padding: 15px;
+  border: 1px solid pink;
 }
-.product img{
-    min-width: 300px;
-    min-height: 250px;
-    object-fit: cover;
-    border-radius: 10px;
+.product-image {
+  min-width: 300px;
+  min-height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
-.product-title{
-    font-size: 28px;
-    font-weight: 500;
+.product-title {
+  font-size: 28px;
+  font-weight: 500;
 }
-.product-price{
-    font-size: 24px;
+.product-price {
+  font-size: 24px;
 }
-.star .fas{
-    color: var(--orange);
+.star {
+  display: flex;
 }
-.star .far{
-    color: var(--orange);
+
+.star .fas {
+  color: var(--orange);
+}
+
+/* Footer */
+
+footer {
+  color: white;
+  background-color: #0a0826;
+  width: 100%;
+  margin: 0 auto;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.social-icons {
+  display: flex;
+}
+.social-icons i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #2e2c52;
 }
